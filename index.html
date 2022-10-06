@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width-device-width, initial-scale=1.0" />
+    <title>Kathryn McCrum's Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cabin:ital@0;1&family=Montserrat&family=Yeseva+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8f9a49dfd0.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="public/km_logo_babra (300 × 300 px).png" class="logo" />
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-regular fa-circle-xmark" onclick="closemenu()"></i>
+          </ul>
+          
+          <i class="fa-regular fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+          <p>Frontend Developer</p>
+          <h1>Kathryn McCrum</h1>
+        </div>
+      </div>
+
+      <!-- ---------- about ------------ -->
+
+      <div id="about">
+        <div class="container">
+          <div class="row">
+            <div class="about-col-1">
+              <img src="public/profile_2.png" />
+            </div>
+            <div class="about-col-2">
+              <h1 class="about">About Me</h1>
+              <p>
+                Ambitious Art-Historian turned Software Engineer who wants to
+                make an impact at a missiondriven company. I have strong project
+                management, communication, and leadership skills, and a keen eye
+                for detail and design, backed by knowledge of the contemporary
+                art world and trends.
+              </p>
+              <a href="public/my-cv.pdf" download class="btn btn2">Download Resume</a>
+              <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
+              </div>
+              <div class="tab-contents active-tab" id="skills">
+                <ul>
+                  <li>Javascript</li>
+                  <li>React</li>
+                  <li>Express</li>
+                  <li>Redux</li>
+                  <li>Node</li>
+                  <li>PostgresSQL</li>
+                  <li>REST API's</li>
+                  <li>Firebase</li>
+                </ul>
+              </div>
+              <div class="tab-contents" id="experience">
+                <ul>
+                  <li>
+                    <span>Jan 2020- May 2022</span><br />Associate Director at
+                    James Cohan Gallery
+                  </li>
+                  <li>
+                    <span>July 2020 - December 2020</span><br />Assistant to the
+                    Directors at Garth Greenan Gallery
+                  </li>
+                  <li>
+                    <span>May 2014 - August 2017</span><br />Client Service
+                    Coordinator & Credit Coordinator at Christie's, Inc
+                  </li>
+                </ul>
+            </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                      <li>
+                        <span>Jun 2022 - Sept 2022</span><br />Certificate <br />Grace Hopper Program at Fullstack Academy
+                      </li>
+                      <li>
+                        <span>Sept 2017 - May 2019 </span><br />M.A. Art History <br/> New York University
+                      </li>
+                      <li>
+                        <span>Sept 2009 - May 2013 </span><br />B.A. Art History & English Literature <br />
+                        Washington University in St. Louis
+                      </li>
+                    </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   <!-- ---------- portfolio ------ -->
+   <div id="portfolio">
+      <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="public/work-1.png">
+            <div class="layer">
+              <h3>Easily Personal Assistant App</h3>
+              <p>Features include local weather, calendar, email, Google events, tasks, and a pomodoro timer in an intuitive interface. <br><br> 
+                Built with <span> React, React-Native with Expo, React-Hooks, Redux-Toolkit, Firebase with Firestore, the OpenWeather API, the Google API,</span> and styled with <span>React-Native Paper</span>.</p>
+              <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="public/work-2.png">
+            <div class="layer">
+              <h3>Every Daisy E-commerce Site</h3>
+              <p class="tagline"> Pet-friendly Plant Shop </p>
+              <p>Features include cart that can be used by both authenticated and unauthenticated users, checkout and payment functionality. <br><br>
+                
+                Built with Javascript, PostgresSQL, Express, Sequelize, React, Redux, Heroku, Stripe, Axios,
+              Bootstrap and CSS.</p>
+              <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="public/work-1.png">
+            <div class="layer">
+              <h3>Easily Personal Assistant App</h3>
+              <p class="tagline"> Do everything easily </p>
+              <a href="https://easily.netlify.app/"><i class="fa-solid fa-arrow-up-right-from-square"></i></i></a>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="btn">See More</a>
+      </div>
+   </div>
+
+   <!-- ----- contact ---- -->
+
+   <div id="contact">
+    <div class="contain">
+      <div class="row">
+        <div class="contact-left">
+            <h1 class="subtitle">Contact Me</h1>
+            <p><i class="fa-regular fa-envelope"></i>kathryncmccrum@gmail.com</p>
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/in/kathryn-mccrum"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://github.com/katmccrum"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+        <div class="contact-right">
+          <form>
+            <input type="text" name="Name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+            <button type="submit" class="btn btn2">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>Copyright  © Kathryn McCrum 2022</p>
+    </div>
+   </div>
+
+    <script>
+        const tablinks = document.getElementsByClassName('tab-links')
+        const tabcontents = document.getElementsByClassName('tab-contents')
+
+        function opentab(tabname){
+            for(tablink of tablinks) {
+                tablink.classList.remove('active-link')
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove('active-tab')
+            }
+            event.currentTarget.classList.add('active-link')
+            document.getElementById(tabname).classList.add('active-tab')
+        }
+    </script>
+    <script>
+      const sidemenu =  document.getElementById("sidemenu");
+
+      function openmenu(){
+        sidemenu.style.right = "0"
+      }
+
+      function closemenu(){
+        sidemenu.style.right = "-200px"
+      }
+
+
+    </script>
+  </body>
+</html>
