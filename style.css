@@ -418,3 +418,9 @@ nav .fa-regular {
     font-size: 14px;
   }
 }
+
+#msg {
+  color: #5452b7;
+  display: block;
+  margin-top: -40px;
+}

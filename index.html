@@ -156,17 +156,18 @@
             </div>
         </div>
         <div class="contact-right">
-          <form>
+          <form name="submit-to-google-sheet">
             <input type="text" name="Name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="email" name="Email" placeholder="Your Email" required>
             <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
             <button type="submit" class="btn btn2">Submit</button>
           </form>
+          <span id="msg"></span>
         </div>
       </div>
     </div>
     <div class="copyright">
-      <p>Copyright  © Kathryn McCrum 2022</p>
+      <p>Copyright © Kathryn McCrum 2022</p>
     </div>
    </div>
 
@@ -197,6 +198,24 @@
       }
 
 
+    </script>
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbxyCRarfI-Yt4XvhkU7TLqtgQqoD2t2CKKSHU6iNRrOj7ucD6Ah_ahTicBI4jAUnUl8zA/exec'
+      const form = document.forms['submit-to-google-sheet'];
+      const msg = document.getElementById("msg");
+
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {
+            msg.innerHTML = "Message sent!"
+            setTimeout(function(){
+              msg.innerHTML = ""
+            }, 5000)
+            form.reset();
+          })
+          .catch(error => console.error('Error!', error.message))
+      })
     </script>
   </body>
 </html>
