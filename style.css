@@ -73,7 +73,7 @@ nav ul li a:hover::after {
 .header-text h1 {
   font-size: 60px;
   margin-top: 2%;
-  margin-bottom: 10%;
+  margin-bottom: 40%;
 }
 
 .header-text h1 span {
@@ -176,7 +176,7 @@ nav ul li a:hover::after {
 .work-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 40px;
+  gap: 30px;
   margin-top: 50px;
 }
 
